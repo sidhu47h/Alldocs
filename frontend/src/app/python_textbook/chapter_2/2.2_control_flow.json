@@ -1,0 +1,41 @@
+{
+  "section_info": {
+    "section_number": "2.2",
+    "title": "Control Flow",
+    "description": "How to control the flow of your program using conditionals and loops.",
+    "learning_outcomes": [
+      "Use if, elif, and else statements to control program flow.",
+      "Write for and while loops to iterate over sequences."
+    ],
+    "subsections": [
+      {
+        "subsection_number": "2.2.1",
+        "title": "Conditional Statements",
+        "description": "How to use conditional statements in Python for decision making."
+      },
+      {
+        "subsection_number": "2.2.2",
+        "title": "Loops",
+        "description": "Introducing loops for repeating tasks."
+      }
+    ]
+  },
+  "subsections": [
+    {
+      "subsection_info": {
+        "subsection_number": "2.2.1",
+        "title": "Conditional Statements",
+        "description": "How to use conditional statements in Python for decision making."
+      },
+      "content": "# Conditional Statements\n\nConditional statements are fundamental to programming, allowing the code to make decisions and react differently based on varying conditions. In Python, these statements help to branch the flow of execution into different paths. It's like telling the program, \"If this condition is true, do this; otherwise, do that.\" The basic conditional statements in Python include `if`, `elif`, and `else`. Understanding how to use these statements is essential for building dynamic and responsive programs.\n\n## Concepts and Theory\n\n### The `if` Statement\nThe `if` statement is the simplest form of conditional statements. It checks whether a condition is true and, if so, executes a block of code.\n\n### The `elif` Statement\nThe `elif` (short for else if) statement is used for checking multiple expressions for `True` and executes a block of code as soon as one of the conditions evaluates to `True`.\n\n### The `else` Statement\nThe `else` statement catches anything which isn't caught by the preceding conditions. It's like a fallback option if all other conditions fail.\n\n### Nested Conditional Statements\nConditional statements can be nested within each other. This nesting allows more complex decision structures.\n\n### Boolean Expressions for Conditions\nConditions in conditional statements are usually expressed in boolean terms (True or False). Python supports various operators to formulate these expressions, such as comparison operators (`==`, `!=`, `>`, `<`, `>=`, `<=`) and logical operators (`and`, `or`, `not`).\n\n## Examples and Implementation\n\n### Syntax of an `if` Statement\nThe basic syntax for an `if` statement is straightforward. Here's an example:\n```python\nif condition:\n    # Block of code to execute if the condition is true\n```\n\n### Multiple Conditions with `elif` and `else`\nThis example demonstrates how to use `elif` and `else`:\n```python\ntemperature = 70\nif temperature > 80:\n    print(\"It's too hot!\")\nelif temperature < 60:\n    print(\"It's too cold!\")\nelse:\n    print(\"The weather is perfect!\")\n```\n\n### Nested `if` Statements\nNested `if` statements allow for more detailed checks:\n```python\nage = 18\nif age >= 18:\n    if age <= 30:\n        print(\"You're between 18 and 30 years old.\")\n    else:\n        print(\"You're older than 30.\")\nelse:\n    print(\"You're younger than 18.\")\n```\n\n## Practice Exercises\n\n1. Write a program that checks if a number is positive, negative, or zero.\n2. Create a Python script that asks the user for their age and tells them if they're eligible to vote (18 and over are eligible).\n3. Develop a program that classifies a person's age group (Child: 0-12, Teen: 13-19, Adult: 20 and above) and prints it.\n4. Implement a simple calculator that takes two numbers and an operator (+, -, *, /) from the user and performs the operation.\n\n## Key Takeaways\n\n- Conditional statements are a backbone of programming logic in Python, allowing for dynamic program execution based on different conditions.\n- The `if`, `elif`, and `else` statements form the basis of Python's conditional statements.\n- Conditions are typically boolean expressions that evaluate to `True` or `False`.\n- Nested conditional statements enable more complicated decision-making processes.\n- Understanding and implementing conditional statements efficiently is crucial for creating responsive and dynamic Python programs."
+    },
+    {
+      "subsection_info": {
+        "subsection_number": "2.2.2",
+        "title": "Loops",
+        "description": "Introducing loops for repeating tasks."
+      },
+      "content": "# Loops\n\nIn programming, loops are used to execute a block of code repeatedly under a given condition. Python, being a high-level programming language, provides several types of loops to handle iterative tasks efficiently. This subsection will explore the fundamental concepts of loops in Python, including the `for` and `while` loops, their syntax, and how they can be used in various programming scenarios. Understanding how to effectively use loops is a critical skill in Python programming, as it allows developers to automate repetitive tasks, manage collections of data, and implement algorithms.\n\n## Concepts and Theory\n\n### For Loop\nThe `for` loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) or other iterable objects. Iterating over a sequence allows you to execute a block of code for every element in that sequence.\n\n#### Syntax\n```python\nfor element in sequence:\n    # Do something with element\n```\n\n#### Range Function\nThe `range()` function is often used with the `for` loop to generate sequences of numbers, which can then be iterated over.\n\n### While Loop\nThe `while` loop in Python enables you to execute a block of code as long as a specified condition is true.\n\n#### Syntax\n```python\nwhile condition:\n    # Execute code block\n```\n\n### Break and Continue\n- **Break**: Immediately exits the loop.\n- **Continue**: Skips the rest of the code inside the loop for the current iteration and moves to the next iteration.\n\n### Nested Loops\nYou can use one or more loops inside another loop. For example, a `for` loop can be inside another `for` loop or a `while` loop.\n\n## Examples and Implementation\n\n### Iterating Over a List\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)\n```\n\n### Using the Range Function\n```python\nfor i in range(5):  # Iterates over a sequence of numbers from 0 to 4\n    print(i)\n```\n\n### While Loop Example\n```python\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1  # Increment count\n```\n\n### Using Break in a Loop\n```python\nfor num in range(10):\n    if num == 5:\n        break  # Exit the loop when num is 5\n    print(num)\n```\n\n### Nested Loops Example\n```python\nfor i in range(3):  # Outer loop\n    for j in range(2):  # Inner loop\n        print(f\"i = {i}, j = {j}\")\n```\n\n## Practice Exercises\n\n1. Write a program that prints all the even numbers between 2 and 10 using a `for` loop.\n2. Create a Python script that uses a `while` loop to count down from 10 to 1, and then prints \"Liftoff!\".\n3. Implement a nested loop to print a 5x5 square of asterisks (`*`).\n4. Use a `for` loop and the `continue` statement to print out all numbers from 1 to 10 except for 3 and 6.\n\n## Key Takeaways\n\n- Loops are a fundamental concept in Python that allow you to execute a block of code repeatedly.\n- The `for` loop is used for iterating over a sequence (like a list, tuple, or string), and the `while` loop is used to execute a code block as long as a condition remains true.\n- The `break` statement can be used to exit a loop, and the `continue` statement can be used to skip the current iteration and proceed to the next one.\n- Understanding and implementing loops efficiently can significantly enhance the automation capabilities of your Python scripts."
+    }
+  ]
+}
